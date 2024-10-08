@@ -32,6 +32,10 @@ const config: Config = {
   				DEFAULT: 'hsl(var(--muted))',
   				foreground: 'hsl(var(--muted-foreground))'
   			},
+        dark: 'hsl(var(--dark))',
+        gstart: 'hsl(var(--gradient-from))',
+        gend: 'hsl(var(--gradient-to))',
+        glosy: 'var(--glosy)',
   			accent: {
   				DEFAULT: 'hsl(var(--accent))',
   				foreground: 'hsl(var(--accent-foreground))'
@@ -55,7 +59,16 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+      animation: {
+        'moveover': 'moveover 6s linear infinite'
+      },
+      keyframes: {
+        moveover: {
+          '0%, 40%': { transform: 'translateX(-100%)' },
+          '60%, 100%': { transform: 'translateX(100%)' },
+        }
+      }
   	}
   },
   plugins: [require("tailwindcss-animate")],

@@ -8,10 +8,29 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+const aeonikProBold = localFont({
+  src: "./fonts/AeonikPro-Bold.woff",
+  variable: "--font-aeonik-pro-bold",
+  weight: "700",
+});
+
+const aeonikProMedium = localFont({
+  src: "./fonts/AeonikPro-Medium.woff",
+  variable: "--font-aeonik-pro-medium",
+  weight: "500",
+});
+
+const aeonikPro = localFont({
+  src: "./fonts/AeonikPro-Regular.woff",
+  variable: "--font-aeonik-pro",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -27,10 +46,10 @@ export default function RootLayout ({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${aeonikProBold.variable} ${aeonikProMedium.variable} ${aeonikPro.variable} overflow-x-hidden overflow-y-auto relative antialiased dark`}
       >
         <Header />
-        <main className="relative">
+        <main className="relative font-[family-name:var(--font-aeonik-pro)]">
           {children}
         </main>
       </body>
