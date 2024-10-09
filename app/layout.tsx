@@ -1,6 +1,7 @@
 import Header from "@/components/sections/Header";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Image from "next/image";
 import "./globals.css";
 
 const geistSans = localFont({
@@ -46,8 +47,11 @@ export default function RootLayout ({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${aeonikProBold.variable} ${aeonikProMedium.variable} ${aeonikPro.variable} overflow-x-hidden overflow-y-auto relative antialiased dark`}
+        className={`${geistSans.variable} ${geistMono.variable} ${aeonikProBold.variable} ${aeonikProMedium.variable} ${aeonikPro.variable} relative antialiased dark`}
       >
+        <div className="fixed -z-0 top-0 left-0 w-full h-screen object-center">
+          <Image className="max-w-full" src="/assets/images/body-bg.png" width={1920} height={1080} alt="Dot square with opacity and dark screen" />
+        </div>
         <Header />
         <main className="relative font-[family-name:var(--font-aeonik-pro)]">
           {children}

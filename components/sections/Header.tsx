@@ -8,7 +8,7 @@ function Header () {
          <Link href="/">
             <Image src="/assets/images/main-logo.png" width={222} height={46} alt="Ducat" />
          </Link>
-         <nav className="flex items-center gap-6">
+         <nav className="flex items-center gap-6 overflow-clip">
             <Link href="/#vault">Vault</Link>
             <Link href="/#liquidations">Liquidations</Link>
             <Link href="/#documentation">Documentation</Link>

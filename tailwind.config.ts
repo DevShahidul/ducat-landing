@@ -61,13 +61,18 @@ const config: Config = {
   			sm: 'calc(var(--radius) - 4px)'
   		},
       animation: {
-        'moveover': 'moveover 6s linear infinite'
+        'moveover': 'moveover 6s linear infinite',
+		  'carousel-move': 'carousel-move var(--duration,80s) infinite'
       },
       keyframes: {
-        moveover: {
+        'moveover' : {
           '0%, 40%': { transform: 'translateX(-100%)' },
           '60%, 100%': { transform: 'translateX(100%)' },
-        }
+        },
+		  'carousel-move':{
+				'0%': { transform: 'translateX(0)'},
+				'100%': { transform: 'translateX(-100%)'},
+		  }
       }
   	}
   },
